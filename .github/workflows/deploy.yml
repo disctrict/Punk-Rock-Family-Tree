@@ -3,6 +3,17 @@ name: Deploy Punk Rock Family Tree Quartz site to GitHub Pages
 on:
   repository_dispatch:
     types: [dispatch-prft]
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+          - info
+          - warning
+          - debug
 
 permissions:
   contents: read
