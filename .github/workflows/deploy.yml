@@ -20,7 +20,8 @@ jobs:
       - name: Checkout Quartz 
         uses: actions/checkout@v6
         with:
-	      repository:disctrict/quartz@v4
+	      repository:disctrict/quartz
+		  ref:v4
 
       - name: Checkout Obsidian 
         uses: actions/checkout@v6
