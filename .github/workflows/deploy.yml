@@ -40,7 +40,7 @@ jobs:
           path: content
       - name: Move static files
         run: |
-          mv content/static/* static/
+          mv content/static/* quartz/static/
       - uses: actions/setup-node@v4
         with:
           node-version: 22
