@@ -38,6 +38,9 @@ jobs:
         with:
           repository: disctrict/prft-obsidian
           path: content
+      - name: Move static files
+        run: |
+          mv content/static/* static/
       - uses: actions/setup-node@v4
         with:
           node-version: 22
