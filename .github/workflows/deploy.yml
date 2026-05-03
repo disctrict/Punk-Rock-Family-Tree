@@ -22,13 +22,11 @@ jobs:
         with:
 	      repository: disctrict/quartz
 		  ref: v4
-
       - name: Checkout Obsidian 
         uses: actions/checkout@v6
         with:
           repository: disctrict/prft-obsidian
           path: content
-        
       - uses: actions/setup-node@v4
         with:
           node-version: 22
