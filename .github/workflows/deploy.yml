@@ -2,27 +2,27 @@ name: Deploy Punk Rock Family Tree Quartz site to GitHub Pages
 
 on:
   repository_dispatch:
-    types: [dispatch-prft] # Triggered only when this type matches
+    types: [dispatch-prft]
 
 permissions:
   contents: read
   pages: write
   id-token: write
- 
+
 concurrency:
   group: "pages"
   cancel-in-progress: false
- 
+
 jobs:
   build:
     runs-on: ubuntu-22.04
     steps:
-      - name: Checkout Quartz 
+      - name: Checkout Quartz
         uses: actions/checkout@v6
         with:
-	      repository: disctrict/quartz
-		  ref: v4
-      - name: Checkout Obsidian 
+          repository: disctrict/quartz
+          ref: v4
+      - name: Checkout Obsidian
         uses: actions/checkout@v6
         with:
           repository: disctrict/prft-obsidian
@@ -48,4 +48,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
